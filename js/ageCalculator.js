@@ -9,6 +9,7 @@ currentDate.setHours(0, 0, 0, 0);
 
 let objErrorMsg = {
 	"required": "This field is required",
+	"NaN": "Not a number",
 	"not_past": "Must be in the past",
 	"invalid": "Must be a valid ",
 	"not_leap": "Not a leap year"
@@ -24,6 +25,11 @@ function validateYear() {
 	inputs.year.nextElementSibling.innerHTML = "";
 	if (inputs.year.value == "") {
 		inputs.year.nextElementSibling.innerHTML = objErrorMsg.required;
+		return false;
+	}
+
+	if(isNaN(inputs.year.value)){
+		inputs.year.nextElementSibling.innerHTML = objErrorMsg.NaN;
 		return false;
 	}
 
@@ -43,6 +49,11 @@ function validateMonth() {
 	inputs.month.nextElementSibling.innerHTML = "";
 	if (inputs.month.value == "") {
 		inputs.month.nextElementSibling.innerHTML = objErrorMsg.required;
+		return false;
+	}
+
+	if(isNaN(inputs.month.value)){
+		inputs.month.nextElementSibling.innerHTML = objErrorMsg.NaN;
 		return false;
 	}
 
@@ -67,6 +78,11 @@ function validateDay() {
 	inputs.day.nextElementSibling.innerHTML = "";
 	if (inputs.day.value == "") {
 		inputs.day.nextElementSibling.innerHTML = objErrorMsg.required;
+		return false;
+	}
+
+	if(isNaN(inputs.day.value)){
+		inputs.day.nextElementSibling.innerHTML = objErrorMsg.NaN;
 		return false;
 	}
 
