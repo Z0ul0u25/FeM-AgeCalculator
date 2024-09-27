@@ -116,9 +116,9 @@ function validateDay() {
 function calculateAge(e) {
 	let validation = [];
 	// sanitation
-	inputs.day.value = inputs.day.value.trim();
-	inputs.month.value = inputs.month.value.trim();
-	inputs.year.value = inputs.year.value.trim();
+	inputs.day.value = Math.floor(inputs.day.value.trim());
+	inputs.month.value = Math.floor(inputs.month.value.trim());
+	inputs.year.value = Math.floor(inputs.year.value.trim());
 	// validation
 
 	validation.push(validateYear());
