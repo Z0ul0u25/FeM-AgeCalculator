@@ -1,0 +1,211 @@
+@font-face {
+	font-family: "Poppins";
+	src        : url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style : normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src        : url("../assets/fonts/Poppins-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style : italic;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src        : url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style : normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src        : url("../assets/fonts/Poppins-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style : italic;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src        : url("../assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+	font-weight: 800;
+	font-style : normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src        : url("../assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+	font-weight: 800;
+	font-style : italic;
+}
+
+html * {
+	box-sizing: border-box;
+}
+
+body {
+	display        : flex;
+	flex-direction : column;
+	justify-content: center;
+
+	background-color: #f0f0f0;
+}
+
+main {
+	margin : 128px auto 0;
+	padding: 16px;
+
+	font-family: Poppins, sans-serif;
+	text-align : center;
+	width      : 400px;
+
+	background-color: #FFFFFF;
+	border-radius   : 16px 16px 64px 16px;
+}
+
+form>div:first-of-type {
+	display: flex;
+	justify-content: center;
+}
+
+form>div>div {
+	text-align: center;
+}
+
+form>div>div:not(:last-of-type) {
+	margin-right: 1rem;
+}
+
+form label,
+form input {
+	display: block;
+}
+
+form label {
+	text-align    : left;
+	font-size     : 0.8rem;
+	text-transform: uppercase;
+	font-weight   : bold;
+	letter-spacing: 0.2rem;
+}
+
+form input {
+	width        : 5.5rem;
+	font-size    : 1.6rem;
+	font-weight  : bold;
+	padding      : 0.5rem;
+	border-radius: 8px;
+}
+
+form button {
+	border          : none;
+	padding         : 0;
+	background-color: #864cff;
+	border-radius   : 50%;
+	width           : 72px;
+	height          : 72px;
+
+
+	position: relative;
+	top     : -32px;
+
+	transition: ease-in-out 0.3s;
+}
+
+form button:hover {
+	background-color: darkviolet;
+}
+
+form button img {
+	width : 45px;
+	height: 45px;
+}
+
+footer {
+	margin: 32px 0;
+	font-size: 1rem;
+	text-align: center;
+}
+
+footer a{
+	color: hsl(228, 45%, 44%);
+}
+
+#result {
+	text-align : left;
+	font-weight: 800;
+	font-style : italic;
+	font-size  : 4rem;
+}
+
+#result p {
+	margin     : 0;
+	line-height: 95%;
+}
+
+.bar {
+	/* display: inline-block; */
+	float   : inline-end;
+	position: relative;
+	width   : 100%;
+	margin  : 32px 0;
+
+	border: 1px solid #BABABA;
+
+	position: relative;
+	top     : 32px
+}
+
+.numbers {
+	color: #864cff;
+}
+
+.error {
+	color     : #e25f5d;
+	font-size : 0.8rem;
+	font-style: italic;
+}
+
+.hidden{
+	display: none;
+}
+
+
+@media (min-width:600px) {
+
+	main {
+		width: 600px;
+	}
+
+	form>div {
+		display: flex;
+	}
+
+	form>div:first-of-type {
+		justify-content: unset;
+	}
+
+	form>div>div {
+		text-align: left;
+	}
+
+	form>div>div:not(:last-of-type) {
+		margin-right: 2rem;
+	}
+
+	form button {
+		position: static;
+		top     : unset;
+	}
+
+	.bar {
+		position: static;
+		top     : unset;
+
+		width   : 90%;
+		height  : 0;
+		margin  : auto 0;
+	}
+
+}
