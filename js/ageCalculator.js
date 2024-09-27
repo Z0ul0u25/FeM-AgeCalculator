@@ -132,6 +132,7 @@ function calculateAge(e) {
 	if (validation[0] && validation[1] && validation[2]) {
 
 		let birthDate = new Date(inputs.year.value, inputs.month.value - 1, inputs.day.value);
+		birthDate.setFullYear(inputs.year.value); // if year is between 00-99 not remap to 1900-1999
 		let age = [];
 
 		age.day = (31 + (currentDate.getDate() - birthDate.getDate())) % 31;
