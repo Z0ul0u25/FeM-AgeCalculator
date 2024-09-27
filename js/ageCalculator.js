@@ -146,7 +146,9 @@ function calculateAge(e) {
 		}
 
 		if (currentDate.getDate() < birthDate.getDate()) {
-			age.month--;
+			if(--age.month == -1){
+				age.month = 11;
+			}
 		}
 
 		outputs.year.innerHTML = age.year;
